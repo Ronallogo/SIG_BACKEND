@@ -50,7 +50,7 @@ public class SecurityConfiguration     {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws  Exception{
 
 
-
+        /* filter*/
         http.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(req ->
                         req.requestMatchers(WHITE_LIST_URL)
