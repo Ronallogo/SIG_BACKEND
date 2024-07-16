@@ -1,7 +1,8 @@
 package com.security.securitySpring.security;
 
 
-import com.security.securitySpring.auth.JwtAuthentificationFilter;
+import com.security.securitySpring.auth.JwtAuthenticationFilter;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -44,7 +45,7 @@ public class SecurityConfiguration     {
     private final AuthenticationProvider authenticationProvider;
    // private final LogoutHandler logoutHandler;
 
-    private final JwtAuthentificationFilter jwtAuthFilter ;
+    private final JwtAuthenticationFilter jwtAuthFilter ;
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws  Exception{
